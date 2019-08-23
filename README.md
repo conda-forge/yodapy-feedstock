@@ -1,7 +1,3 @@
-<!--
-# -*- mode: jinja -*-
--->
-
 About yodapy
 ============
 
@@ -18,8 +14,15 @@ Summary: Your Ocean Data Access in Python
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/yodapy-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/yodapy-feedstock)
+
+<table><tr><td>All platforms:</td>
+    <td>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6188&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/yodapy-feedstock?branchName=master">
+      </a>
+    </td>
+  </tr>
+</table>
 
 Current release info
 ====================

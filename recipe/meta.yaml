@@ -1,4 +1,4 @@
-{% set version = "0.2.3b0" %}
+{% set version = "0.3.0b0" %}
 
 package:
   name: yodapy
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/y/yodapy/yodapy-{{ version }}.tar.gz
-  sha256: 48052e96bdfa1e065d18a3bd91c73100d789e35b8f37c585e7914e1403b5e1ab
+  sha256: bc5ceca3cc00c38bbb9ec195b486a00aaa7e057f9d1addade327e011dfd6f3b9
 
 build:
   number: 0
@@ -15,21 +15,29 @@ build:
 
 requirements:
   host:
-    - python ==3.6
+    - python >=3.6
     - pip
+    - setuptools >=38.6.0
+    - wheel >=0.31.0
+    - twine >=1.11.0
   run:
-    - python ==3.6
-    - dask
-    - gevent ==1.3a1
-    - grequests
-    - lxml
-    - matplotlib
-    - netcdf4
-    - pandas
-    - progressbar2
+    - python >=3.6
     - requests
-    - siphon
+    - pandas
     - xarray
+    - matplotlib
+    - lxml
+    - grequests
+    - gevent
+    - gspread
+    - siphon
+    - dask
+    - seaborn
+    - netcdf4
+    - oauth2client
+    - progressbar2
+    - s3fs
+    - echopype
 
 test:
   imports:
