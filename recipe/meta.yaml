@@ -9,7 +9,7 @@ source:
   sha256: bc5ceca3cc00c38bbb9ec195b486a00aaa7e057f9d1addade327e011dfd6f3b9
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
@@ -25,7 +25,7 @@ requirements:
     - requests
     - pandas
     - xarray
-    - matplotlib
+    - matplotlib-base
     - lxml
     - grequests
     - gevent
