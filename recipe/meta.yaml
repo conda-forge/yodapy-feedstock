@@ -5,23 +5,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/y/yodapy/yodapy-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/y/yodapy/yodapy-{{ version }}.tar.gz
   sha256: bc5ceca3cc00c38bbb9ec195b486a00aaa7e057f9d1addade327e011dfd6f3b9
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - setuptools >=38.6.0
     - wheel >=0.31.0
     - twine >=1.11.0
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - requests
     - pandas
     - xarray
@@ -40,6 +40,8 @@ requirements:
     - echopype
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - yodapy
 
